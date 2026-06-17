@@ -34,7 +34,7 @@ async def check_profile(session, platform, url, username, delay=0.8):
             text = await resp.text()
             text_lower = text.lower()
             
-            # Platform-specific checks
+            
             if "github.com" in url:
                 if (username_lower in text_lower and 
                     any(k in text_lower for k in ["followers", "repositories", "contributions"])):
@@ -72,14 +72,14 @@ async def check_profile(session, platform, url, username, delay=0.8):
                     "couldn't find this account" not in text_lower):
                     return url
                     
-            # General check
+            
             elif (username_lower in text_lower and 
                   len(text) > 5000 and 
                   any(k in text_lower for k in ["profile", "bio", "about"])):
                 return url
                 
     except Exception:
-        pass  # Silent for most errors to keep output clean
+        pass  
     return None
 
 async def search_username(username, delay=0.8, output=None):
@@ -146,7 +146,7 @@ def whois_lookup(domain):
 async def main():
     banner()
     
-    parser = argparse.ArgumentParser(description="ReconX v3.0")
+    parser = argparse.ArgumentParser(description="ReconX v1.0")
     parser.add_argument("-u", "--username", help="Username to search")
     parser.add_argument("-d", "--domain", help="Domain for WHOIS")
     parser.add_argument("--delay", type=float, default=0.8, help="Delay between requests")
