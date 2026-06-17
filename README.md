@@ -60,5 +60,6 @@ pip install aiohttp rich whois
 
  طريقة التشغيل (Usage) 
  
-🔹 عرض المساعدة (Show
+🔹 عرض المساعدة (Show) 
+
 python3 reconx.py -h
