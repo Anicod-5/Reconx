@@ -46,13 +46,16 @@
 
 ## 🛠️ طريقة التثبيت (Installation)
 
+
 ### 1️⃣ تحميل الأداة (Download the tool)
 git clone https://github.com/Anicod-5/ReconX.git
+
 cd ReconX
 
 تثبيت المتطلبات (Install requirements)
 pip install aiohttp rich whois
 
  طريقة التشغيل (Usage) 
+ 
 🔹 عرض المساعدة (Show
 python3 reconx.py -h
