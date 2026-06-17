@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-"""
-ReconX v3.0 - Fixed & More Accurate OSINT Username Checker
-"""
+
 
 import argparse
 import asyncio
